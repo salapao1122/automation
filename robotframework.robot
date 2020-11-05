@@ -16,7 +16,7 @@ POST API NANT TEST
     &{headers}= Create Dictionary    Content-Type=from-data
     ${resp}= POST Request    TESTAPI    /posts    data=${data} headers=${headers}
     Log ${resp.text}
-    Should Contain ${resp.text} 201
+    Should Contain ${resp.text} 200
     Should Contain ${resp.text} ok
 
 *** Test Cases ***
